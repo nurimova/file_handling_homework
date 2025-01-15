@@ -8,3 +8,11 @@ def main(data:str):
     """
 
 # Read data from file
+    s=[]
+    f=open(data)
+    read=f.read()
+    for num in read:
+        if num.isdigit():
+            s.append(num)    
+    return min(s)
+print(main('data\data08.txt'))

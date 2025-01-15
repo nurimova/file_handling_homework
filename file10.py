@@ -6,5 +6,11 @@ def main(data:str):
     Returns:
         int: return answer
     """
-
+    s=[]
+    f=open(data)
+    read=f.read()
+    for row in read:
+        l=read.split(\n)
+        s.append(len(l))
+    return max(s)
 # Read data from file
