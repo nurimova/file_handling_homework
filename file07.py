@@ -13,5 +13,5 @@ def main(data:str):
         if num.isdigit():
             s+=int(num)    
     return s
-print(main('file07.py'))
+print(main('data\data07.txt'))
 # Read data from file

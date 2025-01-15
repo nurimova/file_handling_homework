@@ -11,8 +11,16 @@ def main(data:str):
     s=[]
     f=open(data)
     read=f.read()
-    for num in read:
-        if num.isdigit():
-            s.append(num)    
+    ls=read.split('\n')
+    for num in ls:
+        ls1=num.split(' ')
+        last_item = ls1[-1]
+        point = last_item.count('.')
+        if point==2:
+            n=last_item[0:-2]
+            s.append(float(n))
+        else:
+            s.append(float(ls1[1]))
+
     return min(s)
 print(main('data\data08.txt'))

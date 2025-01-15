@@ -7,10 +7,10 @@ def main(data:str):
         int: return answer
     """
     s=[]
-    f=open(data)
-    read=f.read()
-    for row in read:
-        l=read.split(\n)
-        s.append(len(l))
+    f=open(data, 'r')
+    read_text=f.read()
+    ls=read_text.split('\n')
+    for item in ls:
+        s.append(len(item))
     return max(s)
-# Read data from file
+print(main('data\data06.txt')) 

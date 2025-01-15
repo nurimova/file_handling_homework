@@ -11,8 +11,8 @@ def main(data:str):
     s=[]
     f=open(data, 'r')
     read_text=f.read()
-    for row in read_text:
-        row.split(\\n)
-        s.append(len(row))
+    ls=read_text.split('\n')
+    for item in ls:
+        s.append(len(item))
     return s 
 print(main('data\data06.txt')) 
